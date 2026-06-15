@@ -99,3 +99,10 @@ inner join Users as u  on (b.user_id = u.user_id)
 inner join Matches as m on (b.match_id = m.match_id)
 
 
+-- Query 5: 
+  
+select u.user_id,u.full_name,b.booking_id from Users as u
+left join Bookings as b on (u.user_id = b.user_id)
+
+
+
