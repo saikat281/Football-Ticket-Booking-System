@@ -105,4 +105,12 @@ select u.user_id,u.full_name,b.booking_id from Users as u
 left join Bookings as b on (u.user_id = b.user_id)
 
 
+-- Query 6: 
+
+select booking_id,match_id,total_cost from Bookings
+where total_cost > (
+  select avg(total_cost) from Bookings
+)
+
+
 
