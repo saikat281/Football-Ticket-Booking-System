@@ -86,3 +86,9 @@ select user_id,full_name,email from Users
 where full_name ilike('Tanvir%') or full_name ilike('%Haque%')
 
 
+-- Query 3:
+
+select booking_id,user_id,match_id, coalesce('Action Required',payment_status) as systematic_status from Bookings
+where payment_status is null
+
+
