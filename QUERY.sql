@@ -113,4 +113,10 @@ where total_cost > (
 )
 
 
+-- Query 7: 
+
+select match_id,fixture,base_ticket_price from Matches
+order by base_ticket_price desc limit 2 offset 1 
+
+
 
