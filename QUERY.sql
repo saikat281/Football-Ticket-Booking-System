@@ -92,3 +92,10 @@ select booking_id,user_id,match_id, coalesce('Action Required',payment_status) a
 where payment_status is null
 
 
+-- Query 4: 
+
+select b.booking_id,u.full_name,m.fixture,b.total_cost from Bookings as b
+inner join Users as u  on (b.user_id = u.user_id)
+inner join Matches as m on (b.match_id = m.match_id)
+
+
