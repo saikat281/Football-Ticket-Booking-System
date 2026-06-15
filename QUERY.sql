@@ -80,6 +80,9 @@ where tournament_category = 'Champions League' and match_status = 'Available'
 
 
 
+-- Query 2: 
 
+select user_id,full_name,email from Users
+where full_name ilike('Tanvir%') or full_name ilike('%Haque%')
 
 
